@@ -1,35 +1,11 @@
 export default function PersonalDisplay({ personalObj }) {
-  return (
-    <>
-      <DispPersonal
-        label={"First Name"}
-        objKey={"firstName"}
-        personalObj={personalObj}
-      />
-      <DispPersonal
-        label={"Last Name"}
-        objKey={"lastName"}
-        personalObj={personalObj}
-      />
-      <DispPersonal
-        label={"Email"}
-        objKey={"email"}
-        personalObj={personalObj}
-      />
-      <DispPersonal
-        label={"Contact"}
-        objKey={"phone"}
-        personalObj={personalObj}
-      />
-    </>
-  );
-}
-function DispPersonal({ label, objKey, personalObj }) {
-  return (
+  return (<>
+    <div className="image"></div>
     <div>
-      <p>
-        {label} : {personalObj[objKey]}
-      </p>
+        <p className="name">{personalObj.name}</p>
+        <p>{personalObj.email}</p>
+        <p>{personalObj.phone}</p>
+        <p>{personalObj.address}</p>
     </div>
-  );
+  </>)
 }

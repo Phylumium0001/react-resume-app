@@ -4,25 +4,29 @@ import FormsArea from "./Components/FormsArea";
 import ResumeeArea from "./Components/ResumeeArea";
 function App() {
   const [personalObj, setPersonalObj] = useState({
-    firstName: "",
-    lastName: "",
-    phone: "",
-    email: "",
+    name: "Name",
+    email: "Email",
+    phone: "Phone",
+    address:'Address'
   });
 
   const [experienceObj, setExperienceObj] = useState([
     {
-      company: "",
-      role: "",
-      duration: "",
+      company: "Company",
+      role: "Role",
+      from: "From",
+      to:"To",
+      description:'Description'
     },
   ]);
 
   const [educationObj, setEducationObj] = useState([
     {
-      school: "",
-      certificate: "",
-      doc: "",
+      school: "School",
+      certificate: "Certificate",
+      location:'Location',
+      start: "Start",
+      end:"End"
     },
   ]);
 

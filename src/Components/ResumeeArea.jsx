@@ -9,7 +9,6 @@ export default function ResumeeArea({
 }) {
   return (
     <>
-      <p className="title">Resumee</p>
       <div className="personalDisplayCont">
         <PersonalDisplay personalObj={personalObj} />
       </div>

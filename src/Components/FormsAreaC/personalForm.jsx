@@ -5,14 +5,9 @@ export default function PersonalForm({ onChangeFunc }) {
       <div className="contentCont">
         <div className="subFormCont">
           <InputField
-            label={"First Name"}
+            label={"Name"}
             onChangeFunc={onChangeFunc}
-            objKey={"firstName"}
-          />
-          <InputField
-            label={"Last Name"}
-            onChangeFunc={onChangeFunc}
-            objKey={"lastName"}
+            objKey={"name"}
           />
           <InputField
             label={"Email"}
@@ -23,6 +18,11 @@ export default function PersonalForm({ onChangeFunc }) {
             label={"Phone"}
             onChangeFunc={onChangeFunc}
             objKey={"phone"}
+          />
+          <InputField
+            label={"Address"}
+            onChangeFunc={onChangeFunc}
+            objKey={"address"}
           />
         </div>
       </div>
