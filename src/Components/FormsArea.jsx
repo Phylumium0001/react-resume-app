@@ -18,14 +18,29 @@ export default function FormsArea({
     // Add a new Experience instance for a button
     setExperienceObj([
       ...experienceObj,
-      {title:'Experience', company: "Company", role: "Role", description: "Description", start:"Start",end:"End",location:'Location' },
+      {
+        title: "Experience",
+        company: "Company",
+        role: "Role",
+        description: "Description",
+        start: "Start",
+        end: "End",
+        location: "Location",
+      },
     ]);
   }
   function addEducation() {
     // Add a new education instance for a button
     setEducationObj([
       ...educationObj,
-      { title:"Education ",school: "University", certificate: "Certificate", start: "Start", end:'End',location:'Location' },
+      {
+        title: "Education ",
+        school: "University",
+        certificate: "Certificate",
+        start: "Start",
+        end: "End",
+        location: "Location",
+      },
     ]);
   }
 
