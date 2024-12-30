@@ -12,11 +12,11 @@ export default function ResumeeArea({
       <div className="personalDisplayCont">
         <PersonalDisplay personalObj={personalObj} />
       </div>
-      <div className="experienceDisplayCont">
-        <ExperienceDisplay experienceObj={experienceObj} />
-      </div>
       <div className="educationDisplayCont">
         <EducationDisplay educationObj={educationObj} />
+      </div>
+      <div className="experienceDisplayCont">
+        <ExperienceDisplay experienceObj={experienceObj} />
       </div>
       
       

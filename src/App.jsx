@@ -14,8 +14,9 @@ function App() {
     {
       company: "Company",
       role: "Role",
-      from: "From",
-      to:"To",
+      location:'Location',
+      start: "Start",
+      end:"End",
       description:'Description'
     },
   ]);

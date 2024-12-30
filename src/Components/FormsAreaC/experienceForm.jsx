@@ -16,7 +16,7 @@ export default function ExperienceForm({
     <div className="experienceFormCont">
       <div id="title">
         <p className="title">Experience</p>
-        <button onClick={addExperienceFunc}>+</button>
+        <button onClick={addExperienceFunc}>Add</button>
       </div>
       {experienceObj.map((element, key) => {
         return (
@@ -38,8 +38,29 @@ export default function ExperienceForm({
             <InputField
               index={key}
               onChangeFunc={expChange}
-              label={"Duration"}
-              objKey={"duration"}
+              label={"Location"}
+              objKey={"location"}
+            />
+            <InputField
+              index={key}
+              onChangeFunc={expChange}
+              label={"Start Date"}
+              objKey={"start"}
+              type="date"
+            />
+            <InputField
+              index={key}
+              onChangeFunc={expChange}
+              label={"End Date"}
+              objKey={"end"}
+              type="date"
+            />
+            <InputField
+              index={key}
+              onChangeFunc={expChange}
+              label={"Role Description"}
+              objKey={"description"}
+              type="textarea"
             />
           </div>
         );
@@ -48,13 +69,13 @@ export default function ExperienceForm({
     </div>
   );
 }
-function InputField({ index, label, onChangeFunc, objKey }) {
+function InputField({ index, label, onChangeFunc, objKey,type='text' }) {
   return (
     <div className="formRow">
       <label>{label}</label>
       <span>
         <input
-          type="text"
+          type={type}
           onChange={(event) => {
             onChangeFunc(index, event.target.value, objKey);
           }}

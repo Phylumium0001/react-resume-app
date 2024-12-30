@@ -21,7 +21,7 @@ export default function EducationalForm({
     <div className="educationFormCont">
       <div id="title">
         <p className="title">Education</p>
-        <button onClick={addEducationFunc}>+</button>
+        <button onClick={addEducationFunc}>Add</button>
       </div>
 
       <div className="contentCont">
@@ -47,9 +47,24 @@ export default function EducationalForm({
             <InputField
               index={key}
               onChangeFunc={eduChange}
-              label={"Year of Completion"}
-              objKey={"doc"}
+              label={"Location"}
+              objKey={"location"}
             />
+            <InputField
+              index={key}
+              onChangeFunc={eduChange}
+              label={"Start Date"}
+              objKey={"start"}
+              type="date"
+            />
+            <InputField
+              index={key}
+              onChangeFunc={eduChange}
+              label={"End Date"}
+              objKey={"end"}
+              type="date"
+            />
+
           </div>
           </>);
       })}
@@ -57,13 +72,13 @@ export default function EducationalForm({
     </div>
   );
 }
-function InputField({ index, label, onChangeFunc, objKey }) {
+function InputField({ index, label, onChangeFunc, objKey,type='text' }) {
   return (
     <div className="formRow">
       <label>{label}</label>
       <span>
         <input
-          type="text"
+          type={type}
           onChange={(event) => {
             onChangeFunc(index, event.target.value, objKey);
           }}
